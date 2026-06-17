@@ -161,7 +161,7 @@
 
     .drafts-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      grid-template-columns: 1fr;
       gap: 1rem;
     }
 
@@ -219,14 +219,6 @@
       flex: 1;
       white-space: pre-wrap;
       word-break: break-word;
-    }
-
-    .draft-card.image-prompt { grid-column: 1 / -1; }
-    .draft-card.image-prompt .draft-body {
-      font-family: 'SFMono-Regular', Consolas, monospace;
-      font-size: 0.82rem;
-      background: #0d1117;
-      color: #8b949e;
     }
 
     /* ── Lock notice (shown to owner when drafts are unlocked) ── */
@@ -296,7 +288,6 @@ const PLATFORMS = {
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('drafts') === '1') {
   localStorage.setItem(DRAFTS_KEY, 'true');
-  // Clean the param from the URL without a page reload
   const clean = new URL(window.location.href);
   clean.searchParams.delete('drafts');
   history.replaceState(null, '', clean.toString());
@@ -305,7 +296,6 @@ if (urlParams.get('drafts') === '1') {
 }
 const isOwner = localStorage.getItem(DRAFTS_KEY) === 'true';
 
-// Lock link wires up after DOM is ready
 document.getElementById('lock-link').addEventListener('click', function(e) {
   e.preventDefault();
   localStorage.removeItem(DRAFTS_KEY);
@@ -368,9 +358,8 @@ function renderDrafts(drafts) {
 
   drafts.forEach(({ name, text }) => {
     const cfg = PLATFORMS[name] || { color: '#8b949e' };
-    const isImage = name === 'Background Image Prompt';
     const card = document.createElement('div');
-    card.className = 'draft-card' + (isImage ? ' image-prompt' : '');
+    card.className = 'draft-card';
 
     const header = document.createElement('div');
     header.className = 'draft-card-header';

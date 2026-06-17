@@ -8,7 +8,7 @@
 
 ### US Government Pulls Anthropic Models; State AGs Open Formal Process Against OpenAI
 
-The US government revoked access to Anthropic’s newest models within days of launch, while multiple state attorneys general simultaneously opened a formal legal process against OpenAI. The back-to-back actions signal a new phase of regulatory aggression: a model can achieve state-of-the-art results on Monday and be policy-frozen by Friday. For teams building production applications on frontier APIs, this makes contractual SLAs and fallback model planning non-optional.
+The US government revoked access to Anthropic's newest models within days of launch, while multiple state attorneys general simultaneously opened a formal legal process against OpenAI. The back-to-back actions signal a new phase of regulatory aggression: a model can achieve state-of-the-art results on Monday and be policy-frozen by Friday. For teams building production applications on frontier APIs, this makes contractual SLAs and fallback model planning non-optional.
 
 ### OpenAI Introduces Deployment Simulation for Pre-Release Safety Validation
 
@@ -16,11 +16,11 @@ OpenAI shipped **Deployment Simulation** (June 16), a framework that replays his
 
 ### Great American AI Act: 269-Page Federal Draft Would Pre-empt State AI Laws for 3 Years
 
-Representatives Jay Obernolte and Lori Trahan released a **269-page discussion draft** of the Great American Artificial Intelligence Act. Its headline clause would pre-empt state AI regulations affecting frontier model development for three years — a direct countermove to the patchwork of state laws (including Colorado’s, effective June 30) that enterprises are scrambling to track. If passed, it would reshape the compliance landscape overnight.
+Representatives Jay Obernolte and Lori Trahan released a **269-page discussion draft** of the Great American Artificial Intelligence Act. Its headline clause would pre-empt state AI regulations affecting frontier model development for three years — a direct countermove to the patchwork of state laws (including Colorado's, effective June 30) that enterprises are scrambling to track. If passed, it would reshape the compliance landscape overnight.
 
 ### GPT-5.6 Previewed as a “Meaningful Improvement” Over GPT-5.5 — Late June Launch
 
-OpenAI’s Chief Scientist previewed **GPT-5.6** as a meaningful capability jump over GPT-5.5 Instant, with a late-June release window. Coming just weeks after 5.5 shipped, the pace underscores that incremental releases are now the norm. Developers on the OpenAI API should watch the model deprecation policy closely — rapid iteration means short windows between GA and end-of-life.
+OpenAI's Chief Scientist previewed **GPT-5.6** as a meaningful capability jump over GPT-5.5 Instant, with a late-June release window. Coming just weeks after 5.5 shipped, the pace underscores that incremental releases are now the norm. Developers on the OpenAI API should watch the model deprecation policy closely — rapid iteration means short windows between GA and end-of-life.
 
 ### Databricks Launches Genie One: Agentic AI Coworker Across Enterprise Data
 
@@ -32,11 +32,11 @@ Databricks launched **Genie One**, an agentic AI coworker with a self-improving 
 
 ### Binance Faces EU Ban as Greek Regulator Set to Reject MiCA License
 
-Greece’s Hellenic Capital Market Commission (HCMC) is expected to reject Binance’s MiCA license application, per Reuters sources. The EU’s crypto transition period expires **June 30** — without a valid MiCA license, Binance cannot legally operate in the EU from July 1 onward. Exchange operators and DeFi teams with EU user bases should audit their own MiCA readiness immediately.
+Greece's Hellenic Capital Market Commission (HCMC) is expected to reject Binance's MiCA license application, per Reuters sources. The EU's crypto transition period expires **June 30** — without a valid MiCA license, Binance cannot legally operate in the EU from July 1 onward. Exchange operators and DeFi teams with EU user bases should audit their own MiCA readiness immediately.
 
-### CZ Praises Hyperliquid’s No-KYC Model, Rules Out Binance Following Suit
+### CZ Praises Hyperliquid's No-KYC Model, Rules Out Binance Following Suit
 
-In a Galaxy Brains podcast appearance, Binance founder CZ called Hyperliquid’s on-chain order books, gasless orders, sub-second execution, and 40x leverage “awesome” — then immediately said he would “never operate it the same way today.” The comments crystallise the CEX/DEX regulatory divide. For developers, it’s an endorsement that Hyperliquid’s architecture is worth studying.
+In a Galaxy Brains podcast appearance, Binance founder CZ called Hyperliquid's on-chain order books, gasless orders, sub-second execution, and 40x leverage “awesome” — then immediately said he would “never operate it the same way today.” The comments crystallise the CEX/DEX regulatory divide. For developers, it’s an endorsement that Hyperliquid's architecture is worth studying.
 
 ### Kanoo Group Moves $6 Trillion Trade Market Onto Blockchain Settlement Rails
 
@@ -81,7 +81,7 @@ If your product depends on a frontier AI API, today is a good day to audit your 
 
 The developers who treat this as an engineering problem — redundancy, abstraction layers, provider-agnostic SDKs — will ship through the turbulence. The ones who don’t will get caught flat-footed.
 
-https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/2026-06-17-ai-blockchain-digest.md
+https://llm-stats.com/ai-news
 
 #AI #Regulation #Developers #TechPolicy #ArtificialIntelligence
 
@@ -92,7 +92,7 @@ Same day: state AGs opened formal proceedings against OpenAI.
 
 Frontier API reliability is now a political variable. Build your fallbacks.
 
-https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/2026-06-17-ai-blockchain-digest.md
+https://llm-stats.com/ai-news
 
 #AI #Regulation #Dev
 
@@ -101,7 +101,7 @@ US just yanked Anthropic’s newest models days post-launch. State AGs simultane
 
 Frontier AI is now a political variable. If you ship on these APIs, you need a fallback plan — today.
 
-https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/2026-06-17-ai-blockchain-digest.md
+https://llm-stats.com/ai-news
 
 #AI #Regulation #Dev
 
@@ -161,7 +161,7 @@ June 17 wasn’t an anomaly. It was a preview.
 
 ---
 
-Read the full daily digest: https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/2026-06-17-ai-blockchain-digest.md
+Source: https://llm-stats.com/ai-news
 
 ### Contra
 The US pulling Anthropic’s models creates an immediate, billable need: **AI provider abstraction layers**.
@@ -170,7 +170,7 @@ Every company running on a single frontier API now has a single point of regulat
 
 The pitch is simple: “What happens to your product if your AI provider gets pulled tomorrow?” Most teams don’t have an answer. You can be the answer.
 
-https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/2026-06-17-ai-blockchain-digest.md
+https://llm-stats.com/ai-news
 
 ### Background Image Prompt
 Create a Medium blog header image (horizontal, 1500x1000px, no text). Scene: a large glowing neural network orb representing an AI model floats centre-frame, illuminated in electric blue. A dark silhouette of the US Capitol building looms from the left, extending a red bureaucratic stamp downward toward the orb. On the right, a row of smaller state capitol silhouettes cast long red-tinted shadows. The background is deep navy (#0d1117) fading to near-black at the edges. Lighting: dramatic, high contrast, cold blue on the AI orb, warm red-amber on the government figures. Mood: tension, crackdown, political intervention. Art style: photorealistic digital illustration, cinematic depth of field. No text, logos, or watermarks in the image.
