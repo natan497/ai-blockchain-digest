@@ -60,27 +60,34 @@ Always search for **"breaking news"** and **"today"** variants. Cross-reference:
 
 ## Social Media Drafts section
 
-**Story focus rule:** Pick the **1–2 most impactful stories** of the day across both sections and write ALL platform drafts about those stories only. Do not summarise the full digest across platforms — depth on the top story beats breadth across all stories.
+**Story focus rule:** Pick the **1–2 most impactful stories** of the day and write ALL platform drafts about those stories only. Do not summarise all stories across platforms.
 
-Append this section after the footer. Use exactly these `###` headings:
+**Real post URL format** (use this in all drafts that link out):
+`https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/YYYY-MM-DD-ai-blockchain-digest.md`
+Replace `YYYY-MM-DD` with the actual post date.
+
+Use exactly these `###` headings:
 
 ### LinkedIn
-Focus on the 1–2 top stories. Professional tone. 150–200 words. Explain the developer/business implication clearly. End with 3–5 hashtags.
+Professional tone. 150–200 words focused on the top 1–2 stories. Explain the developer/business implication clearly. End with the **real post URL** on its own line, then 3–5 hashtags. **Do NOT add “Full digest ↓” or any placeholder link text.**
 
 ### Twitter/X
-Focus on the single most breaking story. Max 280 characters. Strong hook. Include a call-to-action ("Full digest →"). 2–3 hashtags.
+Single most breaking story. Max 280 characters (excluding URL — Twitter auto-shortens to 23 chars). Strong hook. End with the **real post URL** on its own line, then 2–3 hashtags. **Do NOT add “Full digest → [link]” or any placeholder text.**
 
 ### Bluesky
-Focus on the single most breaking story. Max 300 characters. Slightly more casual than Twitter. 2–3 hashtags.
+Single most breaking story. Max 300 characters. Slightly casual. End with the **real post URL**. 2–3 hashtags.
 
 ### Medium
-Teaser intro paragraph (80–100 words) focused on the top story. Designed to pull readers into the full post. No hashtags.
+Full blog post — must be a **3-minute read (~700–900 words)**. Structure:
+- **Title**: punchy, specific headline tied to the top story (use `# Title`)
+- **Subtitle**: one-sentence hook that expands on the title (use `*Subtitle*`)
+- **Body**: full standalone article with context, analysis, and developer takeaways. Use `##` headers to break into sections. Write as a complete Medium article, not a digest summary. End with the real post URL.
 
 ### Contra
-Freelancer / builder angle (100–150 words) focused on the top story. Frame the news as a concrete opportunity for independent developers — what can they build or offer as a direct result of this specific story?
+Freelancer/builder angle. 100–150 words focused on the top story. Frame as concrete opportunities for independent developers. End with the real post URL.
 
 ### Background Image Prompt
-A detailed prompt for Midjourney / DALL-E / Stable Diffusion that **visually represents the actual top news story** — not generic tech imagery. Describe the real-world event, entities, or concept from the story in visual terms. Include: style, mood, dominant colours, specific subject matter tied to the story, aspect ratio (16:9, 1200x400 hero banner). No text overlay.
+A prompt formatted specifically for **ChatGPT image generation (DALL-E)** to produce a **Medium blog header image** (horizontal, 1500×1000px, no text overlay). The prompt must visually represent the **actual top news story** — reference the real event, entities, and concept specifically. Include art style, mood, dominant colours, and subject matter tied directly to the story.
 
 ## Deployment
 - **Never push directly to `master`**

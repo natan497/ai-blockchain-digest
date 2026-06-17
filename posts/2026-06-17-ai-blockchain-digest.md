@@ -70,7 +70,7 @@ Kevin Warsh chairs his debut **FOMC meeting today**, with markets pricing near-c
 
 ## Social Media Drafts
 
-*Top stories today: (1) US government pulls Anthropic models + Great American AI Act; (2) Binance EU ban via MiCA rejection.*
+*Top story: US government pulls Anthropic models days after launch + Great American AI Act dropped same day.*
 
 ### LinkedIn
 The US government pulled Anthropic’s newest models just days after launch — and on the same day, state attorneys general opened formal proceedings against OpenAI.
@@ -79,9 +79,9 @@ This isn’t a one-off. It’s a pattern. A model can be state-of-the-art on Mon
 
 If your product depends on a frontier AI API, today is a good day to audit your dependencies: do you have a fallback provider? Are your SLAs contractually protected? Does your use case fall under any of the state laws the new 269-page Great American AI Act is trying to pre-empt?
 
-The developers who treat this as an engineering problem (redundancy, abstraction layers, provider-agnostic SDKs) will ship through the turbulence. The ones who don’t will get caught flat-footed.
+The developers who treat this as an engineering problem — redundancy, abstraction layers, provider-agnostic SDKs — will ship through the turbulence. The ones who don’t will get caught flat-footed.
 
-Full digest ↓
+https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/2026-06-17-ai-blockchain-digest.md
 
 #AI #Regulation #Developers #TechPolicy #ArtificialIntelligence
 
@@ -92,17 +92,76 @@ Same day: state AGs opened formal proceedings against OpenAI.
 
 Frontier API reliability is now a political variable. Build your fallbacks.
 
-Full digest → [link] #AI #Regulation #Dev
+https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/2026-06-17-ai-blockchain-digest.md
+
+#AI #Regulation #Dev
 
 ### Bluesky
-US just yanked Anthropic’s newest models days post-launch. State AGs are simultaneously going after OpenAI.
+US just yanked Anthropic’s newest models days post-launch. State AGs simultaneously went after OpenAI.
 
 Frontier AI is now a political variable. If you ship on these APIs, you need a fallback plan — today.
+
+https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/2026-06-17-ai-blockchain-digest.md
 
 #AI #Regulation #Dev
 
 ### Medium
-On June 17, the US government revoked access to Anthropic’s latest models within days of their launch — while state attorneys general simultaneously opened formal proceedings against OpenAI. For developers building on frontier APIs, these twin moves represent something new: regulatory risk as an operational variable, not just a compliance checkbox. Here’s what happened, why it matters, and what you should do before your next deploy.
+
+# The US Government Just Pulled Anthropic’s Models — And Your AI Stack Is Now a Political Variable
+
+*A regulatory one-two punch hit frontier AI on June 17. Here’s what happened, what it means for developers, and what you should do before your next deploy.*
+
+---
+
+Something happened on June 17, 2026 that most engineers won’t see in their daily standups — but probably should.
+
+The US government revoked access to Anthropic’s newest models within days of their public launch. On the same day, multiple state attorneys general opened a formal legal process against OpenAI. Not a fine. Not a warning. A formal proceeding.
+
+If you’re building on frontier AI APIs, this is not background noise. It’s a signal that the ground rules just changed.
+
+## What happened
+
+The dual action — federal revocation on one side, state-level legal proceedings on the other — wasn’t coincidental. It reflects a pattern that’s been building for months: regulators at multiple levels of government are no longer content to let AI labs operate in a policy vacuum.
+
+The Great American AI Act, a 269-page discussion draft released the same day by Representatives Jay Obernolte and Lori Trahan, attempts to create order from this chaos. Its headline provision would pre-empt state AI regulations affecting frontier model development for three years, essentially freezing the patchwork of state laws while federal frameworks catch up. Colorado’s Consumer Protections for Artificial Intelligence Act goes live June 30 — covering employment, healthcare, financial services, and more.
+
+But here’s the problem: “discussion draft” means it isn’t law. And “pre-empt” means nothing until it passes. In the meantime, the government just demonstrated it can and will pull frontier models without warning.
+
+## Why this matters for your stack
+
+Most production AI applications are built with an implicit assumption: that the API they call today will be callable tomorrow.
+
+That assumption is now broken.
+
+This isn’t a theoretical risk. Anthropic’s models were pulled within the launch window — the period when teams are most likely to have just integrated them into production. If you were one of those teams, you woke up on June 17 with a broken integration and no warning.
+
+The operational question isn’t whether this will happen again. It’s whether your system is designed to handle it when it does.
+
+## Three things to do this week
+
+**1. Audit your single points of failure.**
+
+Map every place in your codebase where a specific model or provider is hardcoded. These are your blast-radius points. Any one of them can become a production incident overnight. A quick grep for provider names and model IDs across your codebase will surface more than you expect.
+
+**2. Build an abstraction layer.**
+
+A provider-agnostic interface between your application logic and the underlying model API is no longer a nice-to-have. Libraries like LiteLLM or a simple internal routing class let you swap providers without touching application code. If you’re on a managed platform like LangChain or LlamaIndex, check what swapping the underlying model actually requires — it’s often less work than you think.
+
+**3. Read your SLAs.**
+
+Most AI API agreements have force majeure and government compliance clauses that absolve providers of liability when they’re forced to pull a model. That’s not a criticism — it’s just reality. Your SLA probably doesn’t protect you in this scenario. Know what it says before an incident, not during one.
+
+## The bigger picture
+
+The regulatory environment for frontier AI is not going to get simpler. The Great American AI Act is a federal attempt to simplify it, but even if it passes, it buys three years — not permanence. And the state-level proceedings against OpenAI signal that legal risk is now multi-jurisdictional.
+
+Developers who treat regulatory risk as an engineering problem — redundancy, fallbacks, provider abstraction — will ship through the turbulence. The ones who treat it as someone else’s problem will keep waking up to broken integrations.
+
+June 17 wasn’t an anomaly. It was a preview.
+
+---
+
+Read the full daily digest: https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/2026-06-17-ai-blockchain-digest.md
 
 ### Contra
 The US pulling Anthropic’s models creates an immediate, billable need: **AI provider abstraction layers**.
@@ -111,5 +170,7 @@ Every company running on a single frontier API now has a single point of regulat
 
 The pitch is simple: “What happens to your product if your AI provider gets pulled tomorrow?” Most teams don’t have an answer. You can be the answer.
 
+https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/2026-06-17-ai-blockchain-digest.md
+
 ### Background Image Prompt
-Photorealistic editorial illustration, 16:9 hero banner 1200x400px. A large glowing AI model represented as a luminous neural network sphere hovers centre-frame. From the left, a stylised US government building extends a bureaucratic red stamp labelled with a red ‘X’ blocking the sphere. From the right, multiple state capitol silhouettes stand in a row, each casting long shadows. The background is deep navy (#0d1117) with cold blue and red accent lighting. The mood is tense and authoritative — a crackdown atmosphere. No text in the image. Cinematic depth of field, high detail.
+Create a Medium blog header image (horizontal, 1500x1000px, no text). Scene: a large glowing neural network orb representing an AI model floats centre-frame, illuminated in electric blue. A dark silhouette of the US Capitol building looms from the left, extending a red bureaucratic stamp downward toward the orb. On the right, a row of smaller state capitol silhouettes cast long red-tinted shadows. The background is deep navy (#0d1117) fading to near-black at the edges. Lighting: dramatic, high contrast, cold blue on the AI orb, warm red-amber on the government figures. Mood: tension, crackdown, political intervention. Art style: photorealistic digital illustration, cinematic depth of field. No text, logos, or watermarks in the image.
