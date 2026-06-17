@@ -144,7 +144,19 @@
       font-size: 1.35rem;
       font-weight: 600;
       color: #f0f6fc;
+      margin-bottom: 0.5rem;
+    }
+
+    .drafts-hint {
+      font-size: 0.8rem;
+      color: #8b949e;
       margin-bottom: 1.5rem;
+    }
+
+    .drafts-hint a {
+      color: #8b949e;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     .drafts-grid {
@@ -209,17 +221,33 @@
       word-break: break-word;
     }
 
-    /* Image prompt card — full width */
-    .draft-card.image-prompt {
-      grid-column: 1 / -1;
-    }
-
+    .draft-card.image-prompt { grid-column: 1 / -1; }
     .draft-card.image-prompt .draft-body {
       font-family: 'SFMono-Regular', Consolas, monospace;
       font-size: 0.82rem;
       background: #0d1117;
       color: #8b949e;
     }
+
+    /* ── Lock notice (shown to owner when drafts are unlocked) ── */
+    .owner-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(88,166,255,0.06);
+      border: 1px solid rgba(88,166,255,0.18);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 2rem;
+      font-size: 0.8rem;
+      color: #8b949e;
+    }
+    .owner-bar a {
+      color: #f85149;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .owner-bar a:hover { text-decoration: underline; }
 
     .loading, .error {
       text-align: center;
@@ -243,38 +271,62 @@
 <div class="container">
   <div id="content"><p class="loading">Fetching post&hellip;</p></div>
   <div id="drafts-wrapper" class="drafts-wrapper" style="display:none">
-    <h2 class="drafts-heading">&#9997; Social Media Drafts</h2>
+    <div id="owner-bar" class="owner-bar" style="display:none">
+      <span>&#128274; Owner view &mdash; social drafts visible</span>
+      <a id="lock-link" href="#">Lock &amp; hide drafts</a>
+    </div>
+    <h2 class="drafts-heading">&#9997;&nbsp;Social Media Drafts</h2>
+    <p class="drafts-hint">Top stories selected for today. Copy each draft directly to the platform.</p>
     <div id="drafts-grid" class="drafts-grid"></div>
   </div>
 </div>
 
 <script>
+const DRAFTS_KEY = 'digest_owner';
 const PLATFORMS = {
-  'LinkedIn':               { color: '#0077B5' },
-  'Twitter/X':              { color: '#e6edf3' },
-  'Bluesky':                { color: '#0085FF' },
-  'Medium':                 { color: '#02B875' },
-  'Contra':                 { color: '#FF4B00' },
-  'Background Image Prompt':{ color: '#A371F7' },
+  'LinkedIn':                { color: '#0077B5' },
+  'Twitter/X':               { color: '#e6edf3' },
+  'Bluesky':                 { color: '#0085FF' },
+  'Medium':                  { color: '#02B875' },
+  'Contra':                  { color: '#FF4B00' },
+  'Background Image Prompt': { color: '#A371F7' },
 };
 
-const params = new URLSearchParams(window.location.search);
-const postPath = params.get('post');
+// ── Access control ──
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('drafts') === '1') {
+  localStorage.setItem(DRAFTS_KEY, 'true');
+  // Clean the param from the URL without a page reload
+  const clean = new URL(window.location.href);
+  clean.searchParams.delete('drafts');
+  history.replaceState(null, '', clean.toString());
+} else if (urlParams.get('drafts') === '0') {
+  localStorage.removeItem(DRAFTS_KEY);
+}
+const isOwner = localStorage.getItem(DRAFTS_KEY) === 'true';
 
+// Lock link wires up after DOM is ready
+document.getElementById('lock-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  localStorage.removeItem(DRAFTS_KEY);
+  document.getElementById('drafts-wrapper').style.display = 'none';
+});
+
+// ── Load post ──
+const postPath = urlParams.get('post');
 if (!postPath) {
   document.getElementById('content').innerHTML = '<p class="error">No post specified. <a href="index.html">Go back</a>.</p>';
 } else {
   fetch(postPath)
     .then(r => { if (!r.ok) throw new Error(); return r.text(); })
     .then(md => {
-      const draftsMarker = '\n## Social Media Drafts';
-      const splitIdx = md.indexOf(draftsMarker);
-      const mainMd   = splitIdx !== -1 ? md.slice(0, splitIdx) : md;
-      const draftsMd = splitIdx !== -1 ? md.slice(splitIdx + draftsMarker.length) : '';
+      const marker = '\n## Social Media Drafts';
+      const split  = md.indexOf(marker);
+      const mainMd  = split !== -1 ? md.slice(0, split) : md;
+      const draftsMd = split !== -1 ? md.slice(split + marker.length) : '';
 
       document.getElementById('content').innerHTML = marked.parse(mainMd);
 
-      // Populate hero
       const h1 = document.querySelector('#content h1');
       if (h1) {
         document.getElementById('hero-title').textContent = h1.textContent;
@@ -286,7 +338,9 @@ if (!postPath) {
         if (m) document.getElementById('hero-date').textContent = formatDate(m[1]);
       }
 
-      if (draftsMd.trim()) renderDrafts(parseDrafts(draftsMd));
+      if (isOwner && draftsMd.trim()) {
+        renderDrafts(parseDrafts(draftsMd));
+      }
     })
     .catch(() => {
       document.getElementById('content').innerHTML = '<p class="error">Could not load post. <a href="index.html">Go back</a>.</p>';
@@ -315,40 +369,43 @@ function renderDrafts(drafts) {
   drafts.forEach(({ name, text }) => {
     const cfg = PLATFORMS[name] || { color: '#8b949e' };
     const isImage = name === 'Background Image Prompt';
-
     const card = document.createElement('div');
     card.className = 'draft-card' + (isImage ? ' image-prompt' : '');
 
-    const safeText = text.replace(/"/g, '&quot;');
+    const header = document.createElement('div');
+    header.className = 'draft-card-header';
+    header.innerHTML = `<span class="platform-label"><span class="platform-dot" style="background:${cfg.color}"></span>${name}</span>`;
 
-    card.innerHTML = `
-      <div class="draft-card-header">
-        <span class="platform-label">
-          <span class="platform-dot" style="background:${cfg.color}"></span>
-          ${name}
-        </span>
-        <button class="copy-btn" data-text="${safeText}">Copy</button>
-      </div>
-      <div class="draft-body">${text}</div>
-    `;
-
-    card.querySelector('.copy-btn').addEventListener('click', function() {
-      navigator.clipboard.writeText(this.dataset.text).then(() => {
-        this.textContent = 'Copied!';
-        this.classList.add('copied');
-        setTimeout(() => { this.textContent = 'Copy'; this.classList.remove('copied'); }, 2000);
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
       });
     });
+    header.appendChild(btn);
 
+    const body = document.createElement('div');
+    body.className = 'draft-body';
+    body.textContent = text;
+
+    card.appendChild(header);
+    card.appendChild(body);
     grid.appendChild(card);
   });
 
+  document.getElementById('owner-bar').style.display = 'flex';
   document.getElementById('drafts-wrapper').style.display = 'block';
 }
 
 function formatDate(iso) {
   const [y, m, d] = iso.split('-').map(Number);
-  return new Date(y, m - 1, d).toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  });
 }
 </script>
 </body>
