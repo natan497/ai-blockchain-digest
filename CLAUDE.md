@@ -1,7 +1,7 @@
 # AI & Blockchain Digest — Session Instructions
 
 ## News freshness (strictly enforced)
-- Only include stories published within the **last 24 hours** (yesterday and today's date)
+- Only include stories published within the **last 24 hours** (yesterday and today’s date)
 - Every web search query must include the exact current date AND the day before
   - Example: `"June 18 2026" OR "June 17 2026" AI news`
 - Reject any story older than 48 hours — do not use it even if no fresher story exists on that topic
@@ -11,7 +11,7 @@
 Run **at least 8 separate web searches** per run, covering these sources:
 
 **AI / tech:**
-- TechCrunch AI (`techcrunch.com/category/artificial-intelligence`)
+- TechCrunch AI
 - The Verge tech news
 - VentureBeat AI
 - Hacker News front page (`news.ycombinator.com`) — look for Show HN and trending posts
@@ -29,18 +29,18 @@ Run **at least 8 separate web searches** per run, covering these sources:
 - Cointelegraph
 - Yahoo Finance Crypto
 
-Always search for **"breaking news"** and **"today"** variants to surface the most urgent stories. Cross-reference: if a story appears on 3+ sources it is likely top news.
+Always search for **"breaking news"** and **"today"** variants. Cross-reference: if a story appears on 3+ sources it is likely top news.
 
 ## Story selection criteria
 - 4–5 stories per section (AI and Blockchain)
 - Must be within 24 hours of the post date
 - Prioritise: breaking exclusives, major product launches, regulatory moves, significant protocol upgrades
-- Developer / tech-professional angle required: explain the "so what" for builders in every summary
+- Developer / tech-professional angle required: explain the “so what” for builders in every summary
 - Avoid: pure price speculation, token price recaps, obvious hype without technical substance
 
 ## Post cadence
 - Published **daily**
-- Intro blockquote: "Daily roundup of the most important developments in AI and blockchain for developers and tech professionals."
+- Intro blockquote: “Daily roundup of the most important developments in AI and blockchain for developers and tech professionals.”
 - Footer: `*Generated on YYYY-MM-DD. Next digest: YYYY-MM-DD.*` — next date is always **tomorrow**
 - Filename: `posts/YYYY-MM-DD-ai-blockchain-digest.md`
 
@@ -59,29 +59,31 @@ Always search for **"breaking news"** and **"today"** variants to surface the mo
 12. `## Social Media Drafts` (see format below)
 
 ## Social Media Drafts section
+
+**Story focus rule:** Pick the **1–2 most impactful stories** of the day across both sections and write ALL platform drafts about those stories only. Do not summarise the full digest across platforms — depth on the top story beats breadth across all stories.
+
 Append this section after the footer. Use exactly these `###` headings:
 
 ### LinkedIn
-Professional tone. 150–200 words. Lead with the 2–3 biggest stories. End with 3–5 hashtags.
+Focus on the 1–2 top stories. Professional tone. 150–200 words. Explain the developer/business implication clearly. End with 3–5 hashtags.
 
 ### Twitter/X
-Max 280 characters. Strong hook in first line. Include a call-to-action ("Full digest →"). 2–3 hashtags.
+Focus on the single most breaking story. Max 280 characters. Strong hook. Include a call-to-action ("Full digest →"). 2–3 hashtags.
 
 ### Bluesky
-Max 300 characters. Slightly more casual than Twitter. Summarise the day in 2–3 punchy lines. 2–3 hashtags.
+Focus on the single most breaking story. Max 300 characters. Slightly more casual than Twitter. 2–3 hashtags.
 
 ### Medium
-Teaser intro paragraph (80–100 words). Designed to pull readers into the full post. No hashtags.
+Teaser intro paragraph (80–100 words) focused on the top story. Designed to pull readers into the full post. No hashtags.
 
 ### Contra
-Freelancer / builder angle (100–150 words). Frame the news as concrete opportunities for independent developers — what can they build or offer as a result of today's stories?
+Freelancer / builder angle (100–150 words) focused on the top story. Frame the news as a concrete opportunity for independent developers — what can they build or offer as a direct result of this specific story?
 
 ### Background Image Prompt
-A detailed generation prompt for Midjourney / DALL-E / Stable Diffusion that visually represents today's digest themes. Include: style (photorealistic / digital art / etc.), mood, dominant colours, subject matter, aspect ratio (16:9, 1200x400 hero banner). No text overlay in the image.
+A detailed prompt for Midjourney / DALL-E / Stable Diffusion that **visually represents the actual top news story** — not generic tech imagery. Describe the real-world event, entities, or concept from the story in visual terms. Include: style, mood, dominant colours, specific subject matter tied to the story, aspect ratio (16:9, 1200x400 hero banner). No text overlay.
 
 ## Deployment
 - **Never push directly to `master`**
 - Create a PR for every new post
 - PR title: `AI & Blockchain Digest — Month DD, YYYY`
 - Merging to `master` triggers automatic GitHub Pages deploy
-- Add `SLACK_WEBHOOK_URL` as a repository secret for failure notifications
