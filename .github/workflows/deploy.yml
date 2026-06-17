@@ -1,0 +1,59 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Notify Slack on failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          COMMIT_SHA: ${{ github.sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_URL" ]; then
+            curl -s -X POST "$SLACK_WEBHOOK_URL" \
+              -H 'Content-type: application/json' \
+              --data "{
+                \"text\": \":x: *GitHub Pages deployment failed*\",
+                \"attachments\": [{
+                  \"color\": \"danger\",
+                  \"fields\": [
+                    {\"title\": \"Repository\", \"value\": \"$REPO\", \"short\": true},
+                    {\"title\": \"Commit\", \"value\": \"<https://github.com/$REPO/commit/$COMMIT_SHA|${COMMIT_SHA:0:7}>\", \"short\": true}
+                  ]
+                }]
+              }"
+          fi
