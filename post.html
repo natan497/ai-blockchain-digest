@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI &amp; Blockchain Digest</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.65;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #0d1117 0%, #0f2240 40%, #0d2b1f 70%, #1a0d2e 100%);
+      border-bottom: 1px solid #21262d;
+      padding: 1.5rem 1rem 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 50%, rgba(88,166,255,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 80% 30%, rgba(63,185,80,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-back {
+      display: inline-block;
+      color: #8b949e;
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+      transition: color .15s;
+    }
+    .hero-back:hover { color: #58a6ff; }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(88,166,255,0.12);
+      color: #58a6ff;
+      border: 1px solid rgba(88,166,255,0.25);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    #hero-title {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 700;
+      color: #f0f6fc;
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
+
+    #hero-date {
+      color: #8b949e;
+      font-size: 0.9rem;
+    }
+
+    /* ── Main layout ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 2rem;
+    }
+
+    /* ── Article content ── */
+    #content h1 { display: none; }
+
+    #content h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #f0f6fc;
+      border-bottom: 1px solid #21262d;
+      padding-bottom: 0.35rem;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    #content h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #79c0ff;
+      margin: 1.25rem 0 0.35rem;
+    }
+
+    #content p { margin: 0.45rem 0; }
+    #content a { color: #58a6ff; text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content strong { color: #f0f6fc; }
+
+    #content blockquote {
+      border-left: 3px solid #30363d;
+      padding: 0.4rem 1rem;
+      margin: 0.6rem 0;
+      color: #8b949e;
+      background: #161b22;
+      border-radius: 0 6px 6px 0;
+    }
+
+    #content ul, #content ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    #content li { margin: 0.2rem 0; }
+    #content hr { border: none; border-top: 1px solid #21262d; margin: 1.25rem 0; }
+
+    #content code {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 4px;
+      padding: 0.15em 0.4em;
+      font-family: 'SFMono-Regular', Consolas, monospace;
+      font-size: 0.875em;
+      color: #ff7b72;
+    }
+
+    #content em { color: #8b949e; }
+
+    /* ── Social Drafts ── */
+    .drafts-wrapper {
+      margin-top: 1.5rem;
+      border-top: 1px solid #21262d;
+      padding-top: 1.25rem;
+    }
+
+    .drafts-heading {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #f0f6fc;
+      margin-bottom: 0.35rem;
+    }
+
+    .drafts-hint {
+      font-size: 0.8rem;
+      color: #8b949e;
+      margin-bottom: 0.75rem;
+    }
+
+    .drafts-hint a {
+      color: #8b949e;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .drafts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .draft-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .draft-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 0.9rem;
+      border-bottom: 1px solid #21262d;
+    }
+
+    .platform-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+
+    .platform-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .copy-btn {
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #8b949e;
+      border-radius: 5px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .copy-btn:hover { background: #30363d; color: #e6edf3; }
+    .copy-btn.copied { background: rgba(63,185,80,0.15); border-color: #3fb950; color: #3fb950; }
+
+    .draft-body {
+      padding: 0.75rem 0.9rem;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #c9d1d9;
+      flex: 1;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .draft-card.image-prompt { grid-column: 1 / -1; }
+    .draft-card.image-prompt .draft-body {
+      font-family: 'SFMono-Regular', Consolas, monospace;
+      font-size: 0.82rem;
+      background: #0d1117;
+      color: #8b949e;
+    }
+
+    /* ── Lock notice (shown to owner when drafts are unlocked) ── */
+    .owner-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(88,166,255,0.06);
+      border: 1px solid rgba(88,166,255,0.18);
+      border-radius: 8px;
+      padding: 0.4rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+      color: #8b949e;
+    }
+    .owner-bar a {
+      color: #f85149;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .owner-bar a:hover { text-decoration: underline; }
+
+    .loading, .error {
+      text-align: center;
+      padding: 3rem;
+      color: #8b949e;
+    }
+    .error { color: #f85149; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <a href="index.html" class="hero-back">&larr; All posts</a>
+    <div class="hero-tag">Daily Digest</div>
+    <h1 id="hero-title">Loading&hellip;</h1>
+    <p id="hero-date"></p>
+  </div>
+</div>
+
+<div class="container">
+  <div id="content"><p class="loading">Fetching post&hellip;</p></div>
+  <div id="drafts-wrapper" class="drafts-wrapper" style="display:none">
+    <div id="owner-bar" class="owner-bar" style="display:none">
+      <span>&#128274; Owner view &mdash; social drafts visible</span>
+      <a id="lock-link" href="#">Lock &amp; hide drafts</a>
+    </div>
+    <h2 class="drafts-heading">&#9997;&nbsp;Social Media Drafts</h2>
+    <p class="drafts-hint">Top stories selected for today. Copy each draft directly to the platform.</p>
+    <div id="drafts-grid" class="drafts-grid"></div>
+  </div>
+</div>
+
+<script>
+const DRAFTS_KEY = 'digest_owner';
+const PLATFORMS = {
+  'LinkedIn':                { color: '#0077B5' },
+  'Twitter/X':               { color: '#e6edf3' },
+  'Bluesky':                 { color: '#0085FF' },
+  'Medium':                  { color: '#02B875' },
+  'Contra':                  { color: '#FF4B00' },
+  'Background Image Prompt': { color: '#A371F7' },
+};
+
+// ── Access control ──
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('drafts') === '1') {
+  localStorage.setItem(DRAFTS_KEY, 'true');
+  const clean = new URL(window.location.href);
+  clean.searchParams.delete('drafts');
+  history.replaceState(null, '', clean.toString());
+} else if (urlParams.get('drafts') === '0') {
+  localStorage.removeItem(DRAFTS_KEY);
+}
+const isOwner = localStorage.getItem(DRAFTS_KEY) === 'true';
+
+document.getElementById('lock-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  localStorage.removeItem(DRAFTS_KEY);
+  document.getElementById('drafts-wrapper').style.display = 'none';
+});
+
+// ── Load post ──
+const postPath = urlParams.get('post');
+if (!postPath) {
+  document.getElementById('content').innerHTML = '<p class="error">No post specified. <a href="index.html">Go back</a>.</p>';
+} else {
+  fetch(postPath)
+    .then(r => { if (!r.ok) throw new Error(); return r.text(); })
+    .then(md => {
+      const marker = '\n## Social Media Drafts';
+      const split  = md.indexOf(marker);
+      const mainMd  = split !== -1 ? md.slice(0, split) : md;
+      const draftsMd = split !== -1 ? md.slice(split + marker.length) : '';
+
+      document.getElementById('content').innerHTML = marked.parse(mainMd);
+
+      const h1 = document.querySelector('#content h1');
+      if (h1) {
+        document.getElementById('hero-title').textContent = h1.textContent;
+        document.title = h1.textContent + ' | AI & Blockchain Digest';
+      }
+      const em = document.querySelector('#content em');
+      if (em && em.textContent.startsWith('Generated')) {
+        const m = em.textContent.match(/Generated on ([\d-]+)/);
+        if (m) document.getElementById('hero-date').textContent = formatDate(m[1]);
+      }
+
+      if (isOwner && draftsMd.trim()) {
+        renderDrafts(parseDrafts(draftsMd));
+      }
+    })
+    .catch(() => {
+      document.getElementById('content').innerHTML = '<p class="error">Could not load post. <a href="index.html">Go back</a>.</p>';
+    });
+}
+
+function parseDrafts(md) {
+  const blocks = [];
+  let current = null;
+  for (const line of md.split('\n')) {
+    if (line.startsWith('### ')) {
+      if (current) blocks.push(current);
+      current = { name: line.slice(4).trim(), lines: [] };
+    } else if (current) {
+      current.lines.push(line);
+    }
+  }
+  if (current) blocks.push(current);
+  return blocks.map(b => ({ name: b.name, text: b.lines.join('\n').trim() }));
+}
+
+function renderDrafts(drafts) {
+  if (!drafts.length) return;
+  const grid = document.getElementById('drafts-grid');
+
+  drafts.forEach(({ name, text }) => {
+    const cfg = PLATFORMS[name] || { color: '#8b949e' };
+    const isImage = name === 'Background Image Prompt';
+    const card = document.createElement('div');
+    card.className = 'draft-card' + (isImage ? ' image-prompt' : '');
+
+    const header = document.createElement('div');
+    header.className = 'draft-card-header';
+    header.innerHTML = `<span class="platform-label"><span class="platform-dot" style="background:${cfg.color}"></span>${name}</span>`;
+
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+      });
+    });
+    header.appendChild(btn);
+
+    const body = document.createElement('div');
+    body.className = 'draft-body';
+    body.textContent = text;
+
+    card.appendChild(header);
+    card.appendChild(body);
+    grid.appendChild(card);
+  });
+
+  document.getElementById('owner-bar').style.display = 'flex';
+  document.getElementById('drafts-wrapper').style.display = 'block';
+}
+
+function formatDate(iso) {
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  });
+}
+</script>
+</body>
+</html>
