@@ -1,7 +1,7 @@
 # AI & Blockchain Digest — Session Instructions
 
 ## News freshness (strictly enforced)
-- Only include stories published within the **last 24 hours** (yesterday and today’s date)
+- Only include stories published within the **last 24 hours** (yesterday and today's date)
 - Every web search query must include the exact current date AND the day before
   - Example: `"June 18 2026" OR "June 17 2026" AI news`
 - Reject any story older than 48 hours — do not use it even if no fresher story exists on that topic
@@ -35,12 +35,12 @@ Always search for **"breaking news"** and **"today"** variants. Cross-reference:
 - 4–5 stories per section (AI and Blockchain)
 - Must be within 24 hours of the post date
 - Prioritise: breaking exclusives, major product launches, regulatory moves, significant protocol upgrades
-- Developer / tech-professional angle required: explain the “so what” for builders in every summary
+- Developer / tech-professional angle required: explain the "so what" for builders in every summary
 - Avoid: pure price speculation, token price recaps, obvious hype without technical substance
 
 ## Post cadence
 - Published **daily**
-- Intro blockquote: “Daily roundup of the most important developments in AI and blockchain for developers and tech professionals.”
+- Intro blockquote: "Daily roundup of the most important developments in AI and blockchain for developers and tech professionals."
 - Footer: `*Generated on YYYY-MM-DD. Next digest: YYYY-MM-DD.*` — next date is always **tomorrow**
 - Filename: `posts/YYYY-MM-DD-ai-blockchain-digest.md`
 
@@ -62,29 +62,28 @@ Always search for **"breaking news"** and **"today"** variants. Cross-reference:
 
 **Story focus rule:** Pick the **1–2 most impactful stories** of the day and write ALL platform drafts about those stories only. Do not summarise all stories across platforms.
 
-**Real post URL format** (use this in all drafts that link out):
-`https://natan497.github.io/ai-blockchain-digest/post.html?post=posts/YYYY-MM-DD-ai-blockchain-digest.md`
-Replace `YYYY-MM-DD` with the actual post date.
+**Links in social drafts — always use the real source news URL, not the GitHub Pages digest link.**
+Each draft must link to the **actual news article** being referenced (e.g., the TechCrunch URL, CoinDesk article URL, etc.). Do NOT link to `natan497.github.io`. This drives readers directly to the primary source.
 
 Use exactly these `###` headings:
 
 ### LinkedIn
-Professional tone. 150–200 words focused on the top 1–2 stories. Explain the developer/business implication clearly. End with the **real post URL** on its own line, then 3–5 hashtags. **Do NOT add “Full digest ↓” or any placeholder link text.**
+Professional tone. 150–200 words focused on the top 1–2 stories. Explain the developer/business implication clearly. End with the **real source URL** of the article on its own line, then 3–5 hashtags. **Do NOT add "Full digest ↓" or any placeholder link text.**
 
 ### Twitter/X
-Single most breaking story. Max 280 characters (excluding URL — Twitter auto-shortens to 23 chars). Strong hook. End with the **real post URL** on its own line, then 2–3 hashtags. **Do NOT add “Full digest → [link]” or any placeholder text.**
+Single most breaking story. Max 280 characters (excluding URL — Twitter auto-shortens to 23 chars). Strong hook. End with the **real source URL** of the article on its own line, then 2–3 hashtags. **Do NOT add "Full digest → [link]" or any placeholder text.**
 
 ### Bluesky
-Single most breaking story. Max 300 characters. Slightly casual. End with the **real post URL**. 2–3 hashtags.
+Single most breaking story. Max 300 characters. Slightly casual. End with the **real source URL**. 2–3 hashtags.
 
 ### Medium
 Full blog post — must be a **3-minute read (~700–900 words)**. Structure:
 - **Title**: punchy, specific headline tied to the top story (use `# Title`)
 - **Subtitle**: one-sentence hook that expands on the title (use `*Subtitle*`)
-- **Body**: full standalone article with context, analysis, and developer takeaways. Use `##` headers to break into sections. Write as a complete Medium article, not a digest summary. End with the real post URL.
+- **Body**: full standalone article with context, analysis, and developer takeaways. Use `##` headers to break into sections. Write as a complete Medium article, not a digest summary. End with the real source URL.
 
 ### Contra
-Freelancer/builder angle. 100–150 words focused on the top story. Frame as concrete opportunities for independent developers. End with the real post URL.
+Freelancer/builder angle. 100–150 words focused on the top story. Frame as concrete opportunities for independent developers. End with the real source URL.
 
 ### Background Image Prompt
 A prompt formatted specifically for **ChatGPT image generation (DALL-E)** to produce a **Medium blog header image** (horizontal, 1500×1000px, no text overlay). The prompt must visually represent the **actual top news story** — reference the real event, entities, and concept specifically. Include art style, mood, dominant colours, and subject matter tied directly to the story.
