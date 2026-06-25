@@ -60,6 +60,12 @@ Always search for **"breaking news"** and **"today"** variants. Cross-reference:
 
 ## Social Media Drafts section
 
+**Humanization requirement (all platforms):** Every draft must read as if written by a real person with a genuine point of view. Avoid:
+- Formulaic openers ("In a significant development…", "Today marks…", "It is worth noting…")
+- Three-part structures that feel like an essay outline
+- Generic "developer takeaway" or "key implication" labels
+- Overly polished, risk-free language — a real person has opinions and uses contractions
+
 **Story focus rule:** Pick the **1–2 most impactful stories** of the day and write ALL platform drafts about those stories only. Do not summarise all stories across platforms.
 
 **Links in social drafts — always use the real source news URL, not the GitHub Pages digest link.**
@@ -68,7 +74,7 @@ Each draft must link to the **actual news article** being referenced (e.g., the 
 Use exactly these `###` headings:
 
 ### LinkedIn
-Professional tone. 150–200 words focused on the top 1–2 stories. Explain the developer/business implication clearly. End with the **real source URL** of the article on its own line, then 3–5 hashtags. **Do NOT add "Full digest ↓" or any placeholder link text.**
+Professional but personal tone — write as a developer sharing something they found genuinely interesting, not as a brand account. 150–200 words focused on the top 1–2 stories. No bullet lists, no bold "key takeaway" lines, no three-part essay structure. End with the **real source URL** of the article on its own line, then 3–5 hashtags. **Do NOT add "Full digest ↓" or any placeholder link text.**
 
 ### Twitter/X
 Single most breaking story. Max 280 characters (excluding URL — Twitter auto-shortens to 23 chars). Strong hook. End with the **real source URL** of the article on its own line, then 2–3 hashtags. **Do NOT add "Full digest → [link]" or any placeholder text.**
@@ -77,10 +83,25 @@ Single most breaking story. Max 280 characters (excluding URL — Twitter auto-s
 Single most breaking story. Max 300 characters. Slightly casual. End with the **real source URL**. 2–3 hashtags.
 
 ### Medium
-Full blog post — must be a **3-minute read (~700–900 words)**. Structure:
-- **Title**: punchy, specific headline tied to the top story (use `# Title`)
-- **Subtitle**: one-sentence hook that expands on the title (use `*Subtitle*`)
-- **Body**: full standalone article with context, analysis, and developer takeaways. Use `##` headers to break into sections. Write as a complete Medium article, not a digest summary. End with the real source URL.
+Full blog post — must be a **3-minute read (~700–900 words)**. Medium flags AI-generated content; this draft MUST read as authentic human writing or it will be filtered.
+
+**Voice — the non-negotiables:**
+- Write in **first person** with genuine perspective: real opinions, honest admissions, actual curiosity
+- Open with a **specific moment or observation**, not background context. Never open with "If you work in AI…" or "There are a handful of papers that…"
+- Argue **one specific angle** — possibly counterintuitive — not a comprehensive summary of the news
+- Include honest uncertainty: "I'm not sure," "here's what I keep coming back to," "I almost missed this"
+- Sound like a developer who found this genuinely interesting, not a journalist summarising a briefing
+
+**Structure — break the AI explainer template:**
+- Maximum **2 `##` section headers** in the whole piece — the writing should flow, not follow an outline
+- Do NOT use the intro → context → analysis → "what developers should watch" → conclusion pattern — Medium Staff Picks don't read that way
+- No bullet-point lists inside the body. No bold "key takeaway" bullets. No "Developer angle:" labels anywhere
+- Use a horizontal rule (`---`) as a section break instead of another `##` header when needed
+
+**Technical:**
+- **Title**: argument-forward, not neutral — something the writer actually believes (use `# Title`)
+- **Subtitle**: one-sentence hook (use `*Subtitle*`)
+- End with the real source URL, no label
 
 ### Contra
 Freelancer/builder angle. 100–150 words focused on the top story. Frame as concrete opportunities for independent developers. End with the real source URL.
