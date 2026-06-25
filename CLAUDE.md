@@ -7,29 +7,22 @@
 - Reject any story older than 48 hours — do not use it even if no fresher story exists on that topic
 - If a platform returns no fresh stories, note that and move on — never pad with older content
 
-## News sourcing — search ALL platforms before writing
-Run **at least 8 separate web searches** per run, covering these sources:
+## News sourcing — use deep-research skill
 
-**AI / tech:**
-- TechCrunch AI
-- The Verge tech news
-- VentureBeat AI
-- Hacker News front page (`news.ycombinator.com`) — look for Show HN and trending posts
-- artificialintelligence-news.com
-- buildfastwithai.com
-- Bloomberg AI / Reuters technology
-- Google News AI topic
+**Always invoke the `/deep-research` skill** as the first step of every run. Do not skip this in favour of raw web searches — deep-research fetches actual article content, runs adversarial cross-verification, and returns cited findings that are far more reliable than search-snippet summaries.
 
-**Blockchain / crypto:**
-- CoinDesk (coindesk.com)
-- The Block (theblock.co)
-- CryptoNews (cryptonews.com)
-- Decrypt (decrypt.co)
-- Bloomberg Crypto
-- Cointelegraph
-- Yahoo Finance Crypto
+Pass a focused research question as the args, for example:
+> "What are the most significant AI and blockchain news stories published on [today's date] or [yesterday's date], relevant to software developers and tech professionals? Cover sources including TechCrunch, The Verge, VentureBeat, Hacker News, buildfastwithai.com, CoinDesk, The Block, Cointelegraph, Decrypt, and Bloomberg. For each story confirm the publication date and that it is within the last 24 hours."
 
-Always search for **"breaking news"** and **"today"** variants. Cross-reference: if a story appears on 3+ sources it is likely top news.
+The skill will fan out parallel searches, fetch source articles, adversarially verify claims across sources, and return a cited synthesis. Use that output as the factual basis for writing the digest — do not add stories from memory or older searches.
+
+**Sources to cover (instruct deep-research to check all of these):**
+
+*AI / tech:* TechCrunch AI, The Verge, VentureBeat AI, Hacker News (`news.ycombinator.com`), artificialintelligence-news.com, buildfastwithai.com, Bloomberg AI / Reuters technology, Google News AI topic
+
+*Blockchain / crypto:* CoinDesk, The Block, CryptoNews, Decrypt, Bloomberg Crypto, Cointelegraph, Yahoo Finance Crypto
+
+**After deep-research completes:** if any section has fewer than 4 confirmed fresh stories, run 1–2 targeted follow-up WebSearch queries to fill the gap. Always search for "breaking news" and "today" variants. Cross-reference: if a story appears on 3+ sources it is likely top news.
 
 ## Story selection criteria
 - 4–5 stories per section (AI and Blockchain)
