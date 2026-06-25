@@ -160,33 +160,43 @@ https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026
 
 ### Medium
 
-# Attention Really Is All You Need — Including at OpenAI
+# I Almost Didn't Read the Noam Shazeer Story
 
-*Noam Shazeer has changed employers three times since 2021. Each time, something important shifted. Today he joined OpenAI.*
+*Then I did. And now I can't stop thinking about what it means.*
 
-There's a version of this story that writes itself. "Transformer co-inventor joins OpenAI." You read the headline, you nod, you close the tab. I almost did.
+Saw the news around 10am and basically kept scrolling. "Transformer co-inventor joins OpenAI." Sure, okay. People move jobs in this industry constantly — someone is always leaving Google for somewhere newer and apparently more interesting.
 
-Then I thought about what it actually means that the person who co-wrote the paper underlying every model any of us use has now left Google three separate times — and chosen each time to go somewhere he thought mattered more. That's not a career. That's a thesis about where the real work is.
+But I went back to it.
 
-I've spent the last few years building on top of GPT, Claude, and Gemini. I have opinions about which one to reach for and when. What I rarely think about is that they all share the same skeletal architecture — the same multi-headed attention, the same positional encoding, the same basic design that eight people described in a 2017 paper. Different bodies, different fine-tuning, same engine under the hood.
+Noam Shazeer is one of eight people who co-wrote "Attention Is All You Need" in 2017. That paper is why the model handling your autocomplete works. Why Claude works. Why Gemini works. Every language model that matters in production right now is built on the architecture those eight people described — multi-headed attention, positional encoding, the whole structure. I've been building on top of these models for years without really stopping to think about the fact that they all share the same skeleton, designed almost a decade ago by a small group at Google.
 
-One of those eight people just walked into OpenAI's building.
+One of them just left DeepMind for OpenAI.
 
----
+What gets me isn't the prestige of the hire. It's the pattern. This is Shazeer's third exit from Google. Left in 2021, co-founded Character.AI, watched it become one of the fastest-growing consumer AI products anyone had seen. Google bought the technology back for around $2.7 billion. Then DeepMind. Now OpenAI.
 
-I don't think this is primarily a talent story. Every frontier lab has brilliant people. What's interesting about Shazeer isn't that he's smart — it's the specific shape of what he tends to build, and why.
-
-When he left Google the first time in 2021, he built Character.AI. The interesting thing wasn't that it became popular (it grew faster than almost any consumer AI product before or since). The interesting thing was *why* it was efficient. Running conversational inference at Character's scale — millions of simultaneous short-turn sessions — meant slowness killed the product directly. There was no room for bloated architecture. The work Shazeer did there quietly influenced how the whole industry started thinking about inference efficiency. Google bought the tech for around $2.7 billion. He stayed at DeepMind for a while. Now he's at OpenAI.
-
-OpenAI is dealing with a version of the same problem at a different order of magnitude. GPT-5 is genuinely impressive. It's also expensive. The gap between "technically capable" and "economically viable for most enterprise workloads" is exactly where the competitive battle will be fought over the next few years — not on benchmarks, but on cost per useful output. Shazeer has navigated that problem before. He almost certainly has a view on how to navigate it again.
+I don't have a clean explanation for why someone makes that sequence of choices. But it's hard to look at a track record like that and not at least pay attention.
 
 ---
 
-Here's what I keep coming back to: architectural shifts in AI don't announce themselves. The Transformer didn't displace recurrent networks overnight. It appeared, it was good, and then over two or three years it was everywhere. Looking back, there were people at the time who understood what was happening. Most people didn't notice until it was obvious.
+The Character.AI thing is worth sitting with for a second — not the growth numbers, those are impressive but not the point. The point is *how* it worked.
 
-I'm not predicting the Transformer era is ending. It might not be, or not anytime soon. But I've learned to pay attention when someone with Shazeer's specific track record moves. His previous moves have been directional in ways that only became clear after the fact.
+Running live inference for millions of simultaneous short conversations at low latency is genuinely hard. Not hard like "we haven't figured out the algorithm yet." Hard like: your model is technically capable and your infrastructure keeps catching fire under real load. Character.AI solved it in ways the rest of the industry spent years absorbing. The architecture decisions Shazeer made there influenced how people think about inference efficiency across the whole field, not just at that one company.
 
-The practical version of this, for anyone building production systems on top of frontier models, is less dramatic than it sounds: don't treat your current model integration as a permanent dependency. Build the abstraction layer now. Maintain the optionality. The cost and performance ratios that make your architecture work today may look quite different in eighteen months — and the reason might trace back to a Wednesday job announcement in June 2026.
+OpenAI's problem right now is different in scale but structurally familiar. GPT-5 is very good. It's also expensive enough that a lot of workloads that should use it don't, because the cost math doesn't close. That's not a capability problem. Make the model meaningfully cheaper to run without making it noticeably worse, and you change the competitive picture at every price point simultaneously.
+
+Shazeer has done that before.
+
+I want to be honest: I might be wrong about what this hire means. I've been confidently wrong about AI timelines enough times that I've basically stopped making predictions with any certainty attached. Maybe this doesn't show up in any product for two years. Maybe it shows up in something no one attributes to a single person — foundational work often goes invisible for a while before it's suddenly obvious everywhere.
+
+But I'm watching OpenAI's model releases more carefully now than I was last week. That's probably the most honest thing I can say about it.
+
+---
+
+The practical bit, for anyone building on frontier models: keep your abstraction layer thin and flexible. Not because a disruption is definitely coming — I genuinely don't know that. But the cost and latency assumptions baked into your architecture today were set by today's infrastructure. If that shifts, you want the change to be a config update and not a rewrite.
+
+That's a lot less exciting than "new architecture incoming." But it's what I'd actually say to someone who asked me what to do about this.
+
+The hire happened. Now we wait and see.
 
 https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026
 

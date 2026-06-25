@@ -80,16 +80,31 @@ Full blog post — must be a **3-minute read (~700–900 words)**. Medium flags 
 
 **Voice — the non-negotiables:**
 - Write in **first person** with genuine perspective: real opinions, honest admissions, actual curiosity
-- Open with a **specific moment or observation**, not background context. Never open with "If you work in AI…" or "There are a handful of papers that…"
+- Open with a **specific moment or observation**, not background context. Never open with "If you work in AI…" or "There are a handful of papers that…" or "There's a version of this story that writes itself"
 - Argue **one specific angle** — possibly counterintuitive — not a comprehensive summary of the news
-- Include honest uncertainty: "I'm not sure," "here's what I keep coming back to," "I almost missed this"
+- Include honest uncertainty: "I might be wrong," "I genuinely don't know," "I'm not sure what to make of this"
 - Sound like a developer who found this genuinely interesting, not a journalist summarising a briefing
 
+**Sentence rhythm (burstiness is essential):**
+- Mix very short sentences and fragments with longer ones unpredictably — AI writes in uniform medium-length sentences, humans don't
+- Start sentences with "But," "And," "So" where natural — humans do, AI avoids it
+- Use sentence fragments. Occasionally. They read as human.
+- Avoid triplet structures: "X, Y, and Z" or "not X, but Y — it's Z" appear constantly in AI output
+
+**Banned phrases and patterns (AI detector red flags):**
+- "Here's what I keep coming back to" — overused AI tell
+- "What's interesting about X isn't Y — it's Z" — classic AI scaffolding
+- "That's not a career. That's a thesis." — parallel one-two punch sentences
+- "Different X, different Y, same Z" — triplet contrast structure
+- "The gap between X and Y" — abstract framing AI loves
+- "X has navigated that problem before" — polished analytical wrap-up
+- Any sentence that could be a subheading in disguise
+
 **Structure — break the AI explainer template:**
-- Maximum **2 `##` section headers** in the whole piece — the writing should flow, not follow an outline
-- Do NOT use the intro → context → analysis → "what developers should watch" → conclusion pattern — Medium Staff Picks don't read that way
+- Maximum **2 `##` section headers** in the whole piece — use `---` as a break instead
+- Do NOT use the intro → context → analysis → "what developers should watch" → conclusion pattern
 - No bullet-point lists inside the body. No bold "key takeaway" bullets. No "Developer angle:" labels anywhere
-- Use a horizontal rule (`---`) as a section break instead of another `##` header when needed
+- The ending should be **understated**, not punchy — humans trail off, AI lands cleanly
 
 **Technical:**
 - **Title**: argument-forward, not neutral — something the writer actually believes (use `# Title`)
