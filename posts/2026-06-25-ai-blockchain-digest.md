@@ -1,4 +1,4 @@
-# AI & Blockchain Digest — June 26, 2026
+# AI & Blockchain Digest — June 25, 2026
 
 > Daily roundup of the most important developments in AI and blockchain for developers and tech professionals.
 
@@ -92,7 +92,7 @@ Starting July 1, 2026 — five days from now — all VASP licenses issued under 
 
 ---
 
-*Generated on 2026-06-26. Next digest: 2026-06-27.*
+*Generated on 2026-06-25. Next digest: 2026-06-26.*
 
 ---
 
