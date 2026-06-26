@@ -116,8 +116,6 @@ https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-
 
 #AI #OpenAI #Semiconductors #LLM #Developers
 
----
-
 ### Twitter/X
 
 Anthropic says Alibaba ran 25,000 fake accounts, scraped 28.8M Claude conversations, and took the results to train competing models. Called it the largest distillation attack they've ever seen. Wrote to the White House about it.
@@ -128,8 +126,6 @@ https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html
 
 #AI #Security #LLM
 
----
-
 ### Bluesky
 
 OpenAI + Broadcom shipped Jalapeño — a custom LLM inference chip — in 9 months flat. Samples running GPT-5.3 in the lab now. If perf-per-watt claims hold, inference costs will eventually drop. That's the Nvidia dependency story getting complicated.
@@ -137,8 +133,6 @@ OpenAI + Broadcom shipped Jalapeño — a custom LLM inference chip — in 9 mon
 https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/
 
 #AI #OpenAI #Chips
-
----
 
 ### Medium
 
@@ -178,8 +172,6 @@ Seven weeks. 28.8 million conversations. Someone planned this carefully, coordin
 
 https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html
 
----
-
 ### Contra
 
 OpenAI's Jalapeño chip announcement opens a concrete window for independent developers.
@@ -191,8 +183,6 @@ Watch what gets unlocked on Jalapeño first. New inference capabilities tend to 
 Separate angle: Qualcomm's Tenstorrent acquisition talks point toward open RISC-V inference infrastructure. If that materializes, there's a consulting market for teams wanting to move off Nvidia lock-in.
 
 https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/
-
----
 
 ### Background Image Prompt
 
