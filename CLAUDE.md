@@ -117,6 +117,9 @@ Freelancer/builder angle. 100–150 words focused on the top story. Frame as con
 ### Background Image Prompt
 A prompt formatted specifically for **ChatGPT image generation (DALL-E)** to produce a **Medium blog header image** (horizontal, 1500×1000px, no text overlay). The prompt must visually represent the **actual top news story** — reference the real event, entities, and concept specifically. Include art style, mood, dominant colours, and subject matter tied directly to the story.
 
+## Social Media Drafts formatting rule
+**Do NOT place `---` horizontal rules between the `###` platform sections** (LinkedIn, Twitter/X, Bluesky, Medium, Contra, Background Image Prompt). The `###` headings are sufficient separators. Adding `---` causes the divider to be copied along with the draft text when using the Copy button. Exception: `---` section breaks *inside* the Medium body are fine.
+
 ## Deployment
 - **Never push directly to `master`**
 - Create a PR for every new post
