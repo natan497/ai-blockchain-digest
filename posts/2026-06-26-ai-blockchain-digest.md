@@ -70,15 +70,19 @@ Nearly $1 billion in crypto futures positions were liquidated on June 25 — inc
 
 ### LinkedIn
 
-The government is now part of OpenAI's release calendar.
+So the White House just told OpenAI to not ship GPT-5.6 publicly.
 
-Yesterday TechCrunch reported that the Trump administration told OpenAI to not release GPT-5.6 broadly — instead, access goes to a select group of partners while the government approves customers one by one. Sam Altman told staff. Prediction market odds for a June release collapsed from 83% to 18% as the news spread.
+Didn't expect to type that sentence this week. But here we are.
 
-I've been building on LLM APIs long enough to remember when the biggest roadmap risk was "OpenAI changes the pricing again." This is different. A federal approval queue with no published criteria is not something you can model in a product plan. It's not rate limits. It's discretionary access controlled by people outside the company.
+TechCrunch reported yesterday: no general availability, no API rollout. Select partners only. And the government approves access customer by customer. Sam Altman told staff about it. Prediction markets had June at 83% a few days ago. That number dropped to 18%.
 
-Whether you think that's appropriate or not probably depends on how worried you are about frontier model risks. But the practical effect is the same either way: if your roadmap involves GPT-5.6, you no longer know when you get it.
+I've been building on LLM APIs for a few years. The risks I planned around were stuff like pricing changes or endpoint deprecations. Not a federal approval queue with no published criteria.
 
-The Binance story today rhymes with the same theme. MiCA just cost the world's largest crypto exchange its entire EU user base. Enforcement that everyone said was coming is coming. In both AI and crypto, "the regulators are watching but not touching" era is ending.
+It's not rate limits. It's discretionary access. Controlled by people outside the company. No timeline anyone can point to.
+
+If your roadmap touches GPT-5.6 right now, you just don't know when you get it.
+
+And honestly, Binance in the EU today is the same story from crypto land. MiCA enforcement just kicked the world's biggest exchange out of the EU market entirely. The "regulators are watching but not touching" phase is ending in both spaces.
 
 https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/
 
@@ -86,9 +90,9 @@ https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-
 
 ### Twitter/X
 
-The White House told OpenAI to not publicly release GPT-5.6. Select partners only — with the government "approving access customer by customer."
+White House told OpenAI: don't ship GPT-5.6 publicly. Select partners only, with the government approving access "customer by customer."
 
-That's a new kind of risk for anyone building AI products.
+If your roadmap depended on GPT-5.6 this month... yeah.
 
 https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/
 
@@ -96,9 +100,9 @@ https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-
 
 ### Bluesky
 
-Binance just exited the EU. Failed MiCA license, told millions of users in Poland, Italy, Spain and France to withdraw funds. The compliance cliff everyone kept warning about just hit its biggest victim.
+Binance just told EU users it's done. Failed the MiCA license, service stops before July 1. Millions of users in Poland, Italy, Spain, France got withdrawal notices this week.
 
-If you're building crypto products for EU users, check your infrastructure partners' CASP status now.
+If you're building anything for EU crypto users, check your infra partners' CASP status now. This is real.
 
 https://www.coindesk.com/policy/2026/06/26/binance-tells-eu-users-it-will-no-longer-provide-services-after-failing-to-secure-mica-license
 
@@ -108,52 +112,68 @@ https://www.coindesk.com/policy/2026/06/26/binance-tells-eu-users-it-will-no-lon
 
 # The Government Is Now in OpenAI's Release Calendar
 
-*GPT-5.6 was supposed to ship this month. Then the White House got involved.*
+*GPT-5.6 was supposed to ship this month. It didn't.*
 
-I opened TechCrunch yesterday morning and had to read the headline twice.
+I woke up, opened TechCrunch, and had to reread the headline a few times.
 
-The Trump administration told OpenAI not to release GPT-5.6 broadly to the public. No public API rollout. No general availability. Instead: a select group of close partners, with the government approving access "customer by customer." Sam Altman told staff. Prediction market odds for a June release — sitting at 83% earlier this week — collapsed to 18% by the time the story circulated.
+The White House told OpenAI not to release GPT-5.6 publicly. No general availability. No API rollout. Instead: select partners, approved by the government, customer by customer. Sam Altman told staff. Prediction markets had June at 83% a few days ago. By the time the story spread, that number was at 18%.
 
-I've been building products on LLM APIs for a few years now. In that time the biggest risks I worried about were pricing changes, rate limits, and the occasional deprecation cycle. "Federal approval queue" was not on the list.
+I've been building on LLM APIs for a few years now. The risks I planned around were stuff like pricing changes, endpoint deprecations, rate limit surprises. A federal approval queue didn't make the list.
 
----
-
-The official framing is about safety. The administration wants to review what GPT-5.6 can do before the public gets it. And honestly, I get the instinct — there are legitimate questions about what frontier models can do that probably shouldn't be answered by putting the model on a consumer app and finding out. I don't think the people raising those concerns are wrong to raise them.
-
-But the mechanics of what's being described here are genuinely new, and I'm not sure everyone building AI products has absorbed what they mean.
-
-A federal approval queue with no published criteria is not a technical constraint. It's a discretionary gate operated by people outside OpenAI. You can't model it in a product timeline. You can't appeal to a specification. You wait, and you don't know when or why access gets approved for any particular use case.
-
-For most developers, GPT-5.6 wasn't even on the roadmap yet. The model hasn't shipped. So this feels abstract. But here's what's not abstract: OpenAI just demonstrated that a new category of variable now exists in API product planning. If it happened with GPT-5.6, it can happen with the next model, or the one after that. And it can happen on no notice, based on decisions made by people who don't have a public comment period.
-
-I might be wrong about how this plays out. Maybe the preview period is short and approval criteria get published quickly and none of this matters in practice. GPT-5.5 exists and works fine and most people will just keep using that.
-
-But something shifted. The relationship between AI labs and federal government just got closer in a way that has direct product implications. And I don't think we've seen where that leads yet.
+And I'm still not totally sure what to make of this.
 
 ---
 
-There's a quieter story underneath all of this that I keep returning to.
+The official reason is safety. The administration wants to review what GPT-5.6 can do before it goes public. Honestly, I don't think that instinct is crazy. There are real questions about what frontier models are capable of that probably shouldn't be answered by just shipping to everyone and finding out later.
 
-Liquid AI released a 230-million-parameter model yesterday — LFM2.5-230M — that runs agentic tool-use tasks at 42 tokens per second on a Raspberry Pi 5. No cloud API. No rate limits. No government approval queue. Just a model that fits on a device you already own, with llama.cpp support from day one, free to use if your company makes under $10M a year.
+But the thing I can't stop thinking about is what the mechanics actually mean.
 
-I'm not saying edge models are the answer to federal AI oversight. But there's something clarifying about a week where the biggest public cloud AI lab had its release restricted by an executive branch directive, and a startup from former MIT researchers simultaneously shipped a model that runs on a $80 single-board computer.
+A federal approval queue with no published criteria isn't a rate limit. It's not a technical constraint you can plan around. It's discretionary. Controlled by people outside OpenAI. No public timeline, no spec to reference, no feedback loop anyone's described.
 
-The infrastructure decisions we make over the next year probably matter more than most of us are treating them.
+So if your roadmap has "GPT-5.6 API access" on it right now, you just don't know when you get it. Or if you do.
+
+That's new.
+
+I might be totally wrong about how this plays out. Maybe the preview period is short. Maybe criteria get published quickly and approvals move fast and most developers get access in July and this is just a speed bump. GPT-5.5 still works fine. Most products don't actually need the next model to function.
+
+But something changed about the relationship between AI labs and the federal government this week. It got closer. In a way that has real product implications. And I genuinely don't know where it goes from here.
+
+Because here's what's different from rate limits or pricing tiers: those are constraints OpenAI controls. They can change them. They can publish the rules. They can respond to feedback. A government approval queue doesn't work like that. The criteria aren't OpenAI's to set. The timeline isn't theirs to control.
+
+And if it happened with GPT-5.6, it can happen with whatever comes next.
+
+---
+
+There's a smaller story from yesterday that I keep coming back to.
+
+Liquid AI released LFM2.5-230M. 230 million parameters, trained on 19 trillion tokens. Runs at 42 tok/s on a Raspberry Pi 5. 213 on a Galaxy S25 Ultra. Ships with llama.cpp and GGUF from day one, so if you've already got a local inference setup it just works. No cloud API. No rate limits. No approval queue.
+
+It beats Google Gemma 3 1B and IBM Granite 350M on tool-use benchmarks, at about a quarter of the size. It's already deployed fully on-device on a Unitree G1 humanoid robot running on its onboard Jetson Orin. And it's free for companies under $10M a year.
+
+I'm not saying edge models are the solution to government oversight of frontier AI. That's a bigger conversation.
+
+But there's something clarifying about a week where the biggest cloud API lab had its release controlled by an executive directive, and a startup from former MIT researchers shipped a model that runs offline on hardware most developers already own.
+
+The infrastructure choices we make over the next year are gonna matter more than most of us are treating them right now. Not in a "cloud is evil" way. Just in a "dependency risk shows up in unexpected places" way.
+
+I don't totally know what to do with that yet. But I think it's worth sitting with.
 
 https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/
 
 ### Contra
 
-Liquid AI's LFM2.5-230M landed yesterday and it's the most relevant model release this week if you're building independently.
+Liquid AI's LFM2.5-230M shipped yesterday. It's the one worth your time this week if you're building independently.
 
-230M parameters. Runs at 213 tok/s on a Galaxy S25 Ultra, 42 tok/s on a Raspberry Pi 5. Ships with llama.cpp and GGUF from day one — no new toolchain. Already deployed on-device on a Unitree G1 humanoid robot. Beats Google Gemma 3 1B and IBM Granite 350M on the BFCLv3 tool-use benchmark despite being a quarter the size.
+230M parameters. Runs at 213 tok/s on a Galaxy S25 Ultra, 42 tok/s on a Raspberry Pi 5. Ships with llama.cpp and GGUF out of the box, so zero new toolchain to figure out. Already running on-device on a Unitree G1 robot with no cloud dependency at all.
 
-The commercial license is free for companies making under $10M in annual revenue. That's most of you reading this.
+Beats Google Gemma 3 1B and IBM Granite 350M on the BFCLv3 tool-use benchmark. At about a quarter the size.
 
-If you've been waiting for a small, capable model that actually runs offline without cloud API dependency — this is worth testing this weekend. The edge agent use case is real now.
+License is free for companies under $10M revenue. That's most of you.
+
+If you've wanted a small model that actually works offline without a cloud API, this is the one to test this weekend.
 
 https://venturebeat.com/technology/liquid-ais-smallest-model-yet-lfm2-5-230m-beats-models-4x-its-size-at-data-extraction-can-run-anywhere
 
 ### Background Image Prompt
 
-A dramatic horizontal cinematic composition (1500×1000px, no text overlay, no logos, no readable text) depicting the tension between AI innovation and government oversight. Center: a glowing AI neural network architecture — dense, crystalline, electric blue-white — suspended in mid-release, its light streams frozen in place by invisible force. Surrounding it: translucent bureaucratic red-tape barriers rendered as geometric force fields in deep amber and burgundy, layered like security checkpoints. In the far background: the faint silhouette of a Washington D.C. government building dissolving into the dark sky, its windows emitting warm orange-yellow light. The mood is suspended tension — power held at the edge of release. Art style: high-detail science fiction digital painting with sharp chiaroscuro, photorealistic elements blended with abstract data-visualization aesthetics. Dominant colors: deep navy, electric blue, amber, burgundy. Mood: restraint, bureaucratic inertia, latent energy waiting for clearance.
+A dramatic horizontal cinematic composition (1500×1000px, no text overlay, no logos, no readable text) depicting the tension between AI innovation and government oversight. Center: a glowing AI neural network architecture, dense, crystalline, electric blue-white, suspended in mid-release with its light streams frozen in place by invisible force. Surrounding it: translucent bureaucratic red-tape barriers rendered as geometric force fields in deep amber and burgundy, layered like security checkpoints. In the far background: the faint silhouette of a Washington D.C. government building dissolving into the dark sky, its windows emitting warm orange-yellow light. The mood is suspended tension, power held at the edge of release. Art style: high-detail science fiction digital painting with sharp chiaroscuro, photorealistic elements blended with abstract data-visualization aesthetics. Dominant colors: deep navy, electric blue, amber, burgundy. Mood: restraint, bureaucratic inertia, latent energy waiting for clearance.
