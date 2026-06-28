@@ -1,4 +1,4 @@
-# AI & Blockchain Digest — June 28, 2026
+# AI & Blockchain Digest — June 27, 2026
 
 > Daily roundup of the most important developments in AI and blockchain for developers and tech professionals.
 
@@ -56,7 +56,7 @@ Framework Ventures closed its fourth fund at $400M, The Block confirmed, with an
 
 ---
 
-*Generated on 2026-06-28. Next digest: 2026-06-29.*
+*Generated on 2026-06-27. Next digest: 2026-06-28.*
 
 ---
 
