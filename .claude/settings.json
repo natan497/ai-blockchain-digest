@@ -1,9 +1,15 @@
 {
   "permissions": {
     "allow": [
+      "Skill",
       "Workflow",
       "WebSearch",
       "WebFetch",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
       "Bash(git *)",
       "mcp__github__push_files",
       "mcp__github__create_pull_request",
