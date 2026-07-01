@@ -3,6 +3,7 @@
     "allow": [
       "Skill",
       "Workflow",
+      "Workflow(deep-research)",
       "WebSearch",
       "WebFetch",
       "Read",
