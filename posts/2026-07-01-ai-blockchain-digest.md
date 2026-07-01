@@ -87,7 +87,7 @@ https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-con
 
 ### Bluesky
 
-Wild week for Claude users outside the US: Fable 5 got disabled for 18 days after a jailbreak triggered an actual export control order from the US government. It's back now — Anthropic shipped a classifier that catches that specific exploit and reroutes to Opus 4.8 instead of failing.
+Fable 5 was dark for non-US Claude users for 18 days after a jailbreak triggered a US export ban. It's back — new classifier catches the exploit.
 
 https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html
 

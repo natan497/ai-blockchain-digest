@@ -73,7 +73,7 @@ Professional but personal tone — write as a developer sharing something they f
 Single most breaking story. Max 280 characters (excluding URL — Twitter auto-shortens to 23 chars). Strong hook. End with the **real source URL** of the article on its own line, then 2–3 hashtags. **Do NOT add "Full digest → [link]" or any placeholder text.**
 
 ### Bluesky
-Single most breaking story. Max 300 characters. Slightly casual. End with the **real source URL**. 2–3 hashtags.
+Single most breaking story. Max 300 characters **total for the entire post — unlike Twitter, Bluesky does NOT auto-shorten URLs**, so the full source URL and hashtags count against the 300 limit, not just the message text. Before finalizing: count the full URL's characters, count the hashtags' characters, and confirm `message + url + hashtags + spacing <= 300`. Long URLs (100+ characters) can eat half the budget on their own — write the message short enough to leave room, and verify the total length with an actual character count, not an estimate. Slightly casual. End with the **real source URL**. 2–3 hashtags.
 
 ### Medium
 Full blog post — must be a **3-minute read (~700–900 words)**. Medium flags AI-generated content; this draft MUST read as authentic human writing or it will be filtered.
