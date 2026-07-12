@@ -1,0 +1,47 @@
+# AI & Blockchain Digest — July 12, 2026
+> Daily roundup of the most important developments in AI and blockchain for developers and tech professionals.
+---
+## Artificial Intelligence
+### OpenAI bets on families as ChatGPT goes deeper into households
+OpenAI is making a significant move into the household market by hiring a dedicated product manager to build experiences for families, caregivers, and older adults. This development indicates that OpenAI is committed to expanding ChatGPT's reach and functionality within households. The hiring of a product manager specifically for this purpose suggests that OpenAI recognizes the potential for AI to have a positive impact on family life and is taking steps to create tailored experiences. This move is likely to be of interest to developers who are working on similar projects or who are looking to integrate AI into their own household-focused applications. The expansion of ChatGPT into households also raises important questions about data privacy and security, which developers will need to consider when building their own AI-powered household products.
+---
+## Blockchain
+### Pakistan crypto chief seeks dialogue after scholar rules against crypto payments
+The head of Pakistan's virtual assets regulator has called for continued dialogue on the treatment of digital assets after meeting with an Islamic scholar who backed a ruling against purchases made with crypto. This development highlights the complex and often contentious relationship between cryptocurrency and traditional institutions. The fact that the regulator is seeking dialogue suggests that they are open to finding a way to accommodate cryptocurrency in a way that is acceptable to all parties. Developers working on blockchain projects will need to be aware of the regulatory landscape and the potential for conflicting opinions on the use of cryptocurrency. The outcome of this dialogue could have significant implications for the future of cryptocurrency in Pakistan and beyond.
+### Cambridge study puts Ethereum near the lower end of PoS energy intensity
+A study by Cambridge has found that Ethereum has a relatively low energy intensity compared to other proof-of-stake (PoS) networks. The study estimated that Ethereum consumes 7.87 GWh annually, which is the second-lowest market-value-adjusted energy intensity among the PoS networks studied. This finding is likely to be of interest to developers who are working on energy-efficient blockchain solutions. The fact that Ethereum is performing well in terms of energy intensity suggests that it may be a good choice for developers who are looking to build sustainable blockchain applications. However, it's also important to consider the broader environmental impact of blockchain technology and to continue exploring ways to reduce energy consumption.
+### Here’s what happened in crypto today
+This article provides a roundup of the latest news and trends in the cryptocurrency space. Developers who are working on blockchain projects will need to stay up-to-date with the latest developments in order to make informed decisions about their own projects. The article covers a range of topics, including daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3, and crypto regulation. By staying current with the latest news and trends, developers can identify opportunities and challenges in the cryptocurrency space and adjust their strategies accordingly.
+### Bitcoin bulls Michael Saylor, Adam Back slam BIP-110 Ordinals proposal
+Bitcoin bulls Michael Saylor and Adam Back have spoken out against the BIP-110 Ordinals proposal. The debate surrounding this proposal highlights the ongoing discussions and disagreements within the cryptocurrency community. Developers who are working on blockchain projects will need to be aware of these debates and consider the potential implications for their own projects. The fact that prominent figures in the cryptocurrency space are speaking out against the proposal suggests that it may not be widely adopted, and developers will need to consider alternative approaches.
+### Empery Digital shares rise after selling Bitcoin to fund AI data center project
+Empery Digital's shares have risen after the company sold its Bitcoin treasury to fund an AI data center project. This development highlights the growing intersection between cryptocurrency and AI. The fact that Empery Digital is using the proceeds from its Bitcoin sale to fund an AI project suggests that the company sees significant potential in this area. Developers who are working on AI or blockchain projects may be interested in exploring the potential for intersection between these two technologies.
+---
+## Sources
+- [OpenAI bets on families as ChatGPT goes deeper into households](https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/)
+- [Pakistan crypto chief seeks dialogue after scholar rules against crypto payments](https://cointelegraph.com/news/pakistan-crypto-chief-dialogue-islamic-ruling?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)
+- [Cambridge study puts Ethereum near the lower end of PoS energy intensity](https://cointelegraph.com/news/ethereum-pos-energy-intensity-cambridge-study?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)
+- [Here’s what happened in crypto today](https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)
+- [Bitcoin bulls Michael Saylor, Adam Back slam BIP-110 Ordinals proposal](https://cointelegraph.com/news/bitcoin-leaders-michael-saylor-and-adam-back-rebuff-bip-110-proposal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)
+- [Empery Digital shares rise after selling Bitcoin to fund AI data center project](https://cointelegraph.com/news/empery-digital-shares-rise-after-selling-bitcoin-treasury-to-fund-ai-data-center-project?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)
+---
+*Generated on 2026-07-12. Next digest: 2026-07-13.*
+---
+## Social Media Drafts
+### LinkedIn
+As I reflect on the latest developments in AI and blockchain, one story that stands out to me is OpenAI's move to hire a dedicated product manager to build experiences for families, caregivers, and older adults. This development highlights the potential for AI to have a positive impact on family life and raises important questions about data privacy and security. As developers, we need to consider the implications of this trend and think about how we can create AI-powered products that are both effective and responsible. https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/
+#AI #ChatGPT #OpenAI #FamilyTech #ResponsibleAI
+### Twitter/X
+OpenAI hires product manager to build ChatGPT experiences for families! https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/
+#AI #ChatGPT #OpenAI
+### Bluesky
+Just learned that OpenAI is hiring a product manager to build ChatGPT experiences for families! Exciting to see AI being used to support family life. https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/
+#AI #ChatGPT #FamilyTech
+### Medium
+# OpenAI Bets on Families as ChatGPT Goes Deeper into Households
+*The Future of AI in Family Life*
+The recent announcement that OpenAI is hiring a dedicated product manager to build experiences for families, caregivers, and older adults is a significant development in the world of AI. This move highlights the potential for AI to have a positive impact on family life and raises important questions about data privacy and security. As developers, we need to consider the implications of this trend and think about how we can create AI-powered products that are both effective and responsible. The fact that OpenAI is investing in this area suggests that the company sees significant potential for AI to support family life. But what does this mean for the future of AI in family life? And how can we ensure that these products are both effective and responsible? https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/
+### Contra
+The recent announcement that OpenAI is hiring a dedicated product manager to build experiences for families, caregivers, and older adults is a significant development in the world of AI. As a developer, you may be wondering how you can create AI-powered products that are both effective and responsible. Our team can help you navigate the complexities of AI development and ensure that your products are both innovative and responsible. https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/
+### Background Image Prompt
+Create a horizontal 1500x1000px Medium header image with a warm and inviting scene of a family using AI-powered devices in their home. The palette should be bright and colorful, with a focus on blues and whites to convey a sense of trust and reliability. The mood should be upbeat and optimistic, with a sense of excitement and possibility. The art style should be modern and minimalist, with clean lines and simple shapes. In the background, include a subtle pattern of circuits and wires to hint at the technology behind the AI-powered devices. The overall effect should be one of warmth and inclusivity, conveying the idea that AI is a positive force in family life.
